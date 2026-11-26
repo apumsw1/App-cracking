@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		body {
+			background-color: #000;
+			color: #0ff;
+			font-size: 16px;
+			font-family: Arial, sans-serif;
+			padding: 0;
+			margin: 0;
+		}
+		
+		a {
+			text-decoration: none;
+			color: yellow;
+			}
+   .topbar {
+			display: block;
+			padding: 20px;
+			background-color: #111;
+			color: #0ff;
+			border-radius: 5px;            
+		}
+
+		.topbar li {
+			margin-bottom: 10px;
+			list-style-type: none;
+			display: flex;
+			align-items: center;
+			color: inherit;
+		}
+		.topbar img {
+			height: 30px;
+			width: 30px;
+			margin-right: 10px;
+		}
+		.topbar a {
+			color: inherit;
+			}
+
+	</style>
+</head>
+<body>
+	
+		
+	<div class="topbar" id="hardware"></div>
+<script>
+	const appList = document.getElementById("hardware");
+
+fetch("https://api.github.com/repos/DPModsYT/DPModsDialog/contents/apps.html", {
+  headers: {
+    Authorization: "Bearer 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",
+  },
+})
+  .then((response) => response.json())
+  .then((data) => {
+    appList.innerHTML = atob(data.content);
+  });
+ </script>
+ </body>
+ </html>
