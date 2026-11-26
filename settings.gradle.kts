@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Brutal Admin Loader"
+rootProject.name = "Ultra JADUGAR Mod"
 include(":app")
